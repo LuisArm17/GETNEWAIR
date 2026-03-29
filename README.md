@@ -108,8 +108,8 @@ El autoplay/pause por viewport es automático vía `IntersectionObserver` en `co
 
 ## Checklist antes de lanzar
 
-- [ ] Reemplaza `hola@tucorreo.com` en el botón de precio
-- [ ] Reemplaza `56900000000` con tu número de WhatsApp real
-- [ ] Agrega tu nombre en `data/cuerpo-que-descansa.json` → `author`
+- [ ] Reemplaza `l.hernangonz21@gmail.com` en el botón de precio
+- [ ] Reemplaza `+56923953959` con tu número de WhatsApp real
+- [ ] Agrega tu nombre en `data/cuerpo-que-descansa.json` → `Luis Hernán González Masoterapeuta Funcional `
 - [ ] Sube las imágenes/videos a `assets/` si los necesitas
 - [ ] Verifica en mobile (responsive activo desde 900px y 600px)
