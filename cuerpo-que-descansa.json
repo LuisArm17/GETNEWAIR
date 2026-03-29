@@ -1,0 +1,102 @@
+{
+  "brand": "Cuerpo que Descansa",
+  "tagline": "Un protocolo de 4 semanas para recuperar el descanso que perdiste.",
+  "author": "Tu nombre aquí",
+  "role": "Terapeuta Corporal Especialista",
+
+  "kpis": [
+    { "value": 94,  "suffix": "%",   "label": "Clientes duermen mejor desde semana 2",  "decimals": 0 },
+    { "value": 4,   "suffix": " sem","label": "Duración del programa completo",           "decimals": 0 },
+    { "value": 8,   "suffix": "hrs", "label": "Promedio de sueño recuperado por noche",  "decimals": 1 },
+    { "value": 100, "suffix": "%",   "label": "Sesiones con protocolo personalizado",     "decimals": 0 }
+  ],
+
+  "chart": {
+    "labels": ["Sem 0", "Sem 1", "Sem 2", "Sem 3", "Sem 4"],
+    "datasets": [
+      {
+        "label": "Calidad de sueño (%)",
+        "data": [28, 44, 61, 78, 92]
+      },
+      {
+        "label": "Tensión corporal (inverso)",
+        "data": [85, 68, 50, 34, 15]
+      }
+    ]
+  },
+
+  "weeks": [
+    {
+      "number": "01",
+      "title": "Diagnóstico y activación",
+      "description": "Mapeamos tu tensión crónica. Trabajamos la capa superficial — trapecios, cuello, lumbar. Entrega de Guía de Rutina Nocturna personalizada.",
+      "duration": "75 min"
+    },
+    {
+      "number": "02",
+      "title": "Sistema nervioso profundo",
+      "description": "Occipital, base de cráneo, psoas. La sesión de mayor cambio perceptible. Check-in por WhatsApp al día 3 post-sesión.",
+      "duration": "75 min"
+    },
+    {
+      "number": "03",
+      "title": "Integración y regulación",
+      "description": "Consolidamos lo ganado. Puntos de retención residual. Se entrega audio guiado de 10 min grabado con voz real para usar antes de dormir.",
+      "duration": "60 min"
+    },
+    {
+      "number": "04",
+      "title": "Cierre y plan de mantenimiento",
+      "description": "Comparativa semana 1 vs 4. Evaluación completa. Entrega de Plan de Mantenimiento Personalizado — tu hoja de ruta hacia adelante.",
+      "duration": "60 min"
+    }
+  ],
+
+  "profiles": [
+    {
+      "id": "profesional",
+      "label": "Profesional",
+      "icon": "◈",
+      "title": "El ejecutivo que no puede apagar la mente",
+      "description": "Llevas meses funcionando a pleno rendimiento. Tu cuerpo aguanta, pero cada mañana despiertas más tenso que la noche anterior. No es estrés mental: es estrés acumulado en tejido.",
+      "pain": "Despertares frecuentes, tensión en cuello y hombros, sensación de no haber descansado."
+    },
+    {
+      "id": "emprendedor",
+      "label": "Emprendedor",
+      "icon": "◇",
+      "title": "El que construye de día y no duerme de noche",
+      "description": "Tu mente tiene mil pestañas abiertas. Tu cuerpo las paga todas. El insomnio no es un hábito, es una acumulación física que requiere un reset real.",
+      "pain": "Dificultad para conciliar el sueño, mandíbula apretada, ansiedad física al acostarse."
+    },
+    {
+      "id": "persona",
+      "label": "Cualquier persona",
+      "icon": "○",
+      "title": "El que lleva meses durmiendo mal y ya lo normalizó",
+      "description": "Le dijiste a todos que 'dormís poco pero estás bien'. No estás bien. Tu sistema nervioso está en alerta permanente y tu cuerpo necesita que alguien lo ayude a soltar.",
+      "pain": "Sueño superficial, molestias físicas al despertar, depender de pastillas o suplementos."
+    }
+  ],
+
+  "pitches": [
+    "Si llevas meses durmiendo mal, tu cuerpo está pidiendo ayuda. En 4 semanas lo resolvemos.",
+    "El estrés no desaparece con respirar. Se acumula en tu cuerpo hasta que no puedes dormir. Trabajo exactamente eso.",
+    "No te vendo masajes. Te ayudo a recuperar el descanso que perdiste."
+  ],
+
+  "includes": [
+    { "icon": "◉", "text": "4 sesiones presenciales (75 / 75 / 60 / 60 min)" },
+    { "icon": "◈", "text": "Evaluación inicial personalizada (antes de la 1ª sesión)" },
+    { "icon": "◇", "text": "Guía de Rutina Nocturna en PDF" },
+    { "icon": "○", "text": "Audio guiado de 10 min (voz real, no IA)" },
+    { "icon": "◉", "text": "2 check-ins por WhatsApp (sem. 2 y sem. 3)" },
+    { "icon": "◈", "text": "Plan de Mantenimiento Personalizado al cierre" }
+  ],
+
+  "price": {
+    "range": "$220.000 – $320.000",
+    "currency": "CLP",
+    "note": "Precio de lanzamiento para primeros 5 clientes"
+  }
+}

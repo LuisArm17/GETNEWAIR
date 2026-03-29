@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pitch Decks — Menú</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="shared/css/base.css" />
+
+  <style>
+    :root {
+      --accent:      #a8c47a;
+      --accent-2:    #c4a87a;
+      --accent-glow: rgba(168,196,122,0.12);
+      --font-display:'Cormorant Garamond', Georgia, serif;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse 70% 50% at 20% 10%, rgba(168,196,122,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 90%, rgba(196,168,122,0.04) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .index-hero {
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 0 4rem;
+      position: relative;
+    }
+
+    .index-hero__eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .index-hero__eyebrow::before {
+      content:'';
+      display:block;
+      width:24px;height:1px;
+      background:var(--accent);
+    }
+
+    .index-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    .index-hero__title em { font-style:italic; color:var(--accent); }
+
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+      padding: 4rem 0 8rem;
+    }
+
+    .brand-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.4s, transform 0.4s, box-shadow 0.4s;
+      text-decoration: none;
+    }
+    .brand-card::before {
+      content:'';
+      position:absolute;
+      top:0;left:0;right:0;
+      height:2px;
+      background:linear-gradient(90deg, var(--card-accent, var(--accent)), transparent);
+    }
+    .brand-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-6px);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    }
+
+    .brand-card__tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--card-accent, var(--accent));
+      margin-bottom: 1.25rem;
+      opacity: 0.8;
+    }
+    .brand-card__title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin-bottom: 0.75rem;
+    }
+    .brand-card__title em { font-style:italic; color:var(--card-accent, var(--accent)); }
+    .brand-card__desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .brand-card__arrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--card-accent, var(--accent));
+    }
+
+    /* Add-your-own card */
+    .brand-card--add {
+      border-style: dashed;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 220px;
+      cursor: default;
+    }
+    .brand-card--add .plus {
+      font-size: 2rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      line-height: 1;
+    }
+    .brand-card--add p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      max-width: 24ch;
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<div class="container" style="position:relative;z-index:1;">
+
+  <div class="index-hero">
+    <p class="index-hero__eyebrow">Pitch Decks</p>
+    <h1 class="index-hero__title">
+      Presentaciones<br />
+      que <em>venden.</em>
+    </h1>
+  </div>
+
+  <div class="brands-grid">
+
+    <!-- ── Cuerpo que Descansa ── -->
+    <a href="brands/cuerpo-que-descansa/index.html"
+       class="brand-card"
+       style="--card-accent: #a8c47a;">
+      <p class="brand-card__tag">Masajista · Bienestar · Chile</p>
+      <h2 class="brand-card__title">
+        Cuerpo que <em>Descansa</em>
+      </h2>
+      <p class="brand-card__desc">
+        Programa de 4 semanas para recuperar el sueño a través de
+        trabajo corporal especializado en estrés y sistema nervioso.
+      </p>
+      <p class="brand-card__arrow">Ver presentación →</p>
+    </a>
+
+    <!-- ── Slot vacío — ejemplo de cómo agregar más ── -->
+    <div class="brand-card brand-card--add">
+      <div class="plus">+</div>
+      <p>
+        Agrega tu próxima presentación en
+        <code style="font-size:0.75rem;color:var(--accent);">/brands/nombre-marca/</code>
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  // Progress bar simple sin módulo
+  window.addEventListener('scroll', () => {
+    const bar   = document.getElementById('progress-bar');
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar && total > 0) bar.style.width = (window.scrollY / total * 100) + '%';
+  }, { passive: true });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cuerpo que Descansa — Programa de 4 Semanas</title>
+  <meta name="description" content="Un protocolo de 4 semanas para recuperar el descanso que perdiste. Trabajo corporal especializado en estrés y sueño." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../shared/css/base.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
+
+  <!-- Main JS (module so it can import shared/core.js) -->
+  <script type="module" src="js/main.js" defer></script>
+</head>
+<body>
+
+<!-- ── Progress Bar ─────────────────────────────────────── -->
+<div id="progress-bar"></div>
+
+<!-- ── Nav ──────────────────────────────────────────────── -->
+<nav class="nav">
+  <a href="../../index.html" class="nav__logo">
+    Cuerpo que <span>Descansa</span>
+  </a>
+  <a href="#price" class="nav__cta">Reservar lugar</a>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECCIÓN 1 — HERO
+     ══════════════════════════════════════════════════════════ -->
+<section class="hero section">
+  <div class="container">
+    <p class="hero__eyebrow">Programa de 4 semanas</p>
+
+    <h1 class="hero__title">
+      El cuerpo que<br />
+      no puede<br />
+      <em>descansar.</em>
+    </h1>
+
+    <p class="hero__sub">
+      No es ansiedad. No es un mal hábito. Es tensión acumulada
+      en tejido que tu cuerpo no sabe cómo soltar.
+      En 4 semanas, lo resolvemos juntos.
+    </p>
+
+    <div class="hero__actions">
+      <a href="#program" class="btn btn--primary">Ver el programa ↓</a>
+      <a href="#who"     class="btn btn--ghost">¿Para quién es?</a>
+    </div>
+  </div>
+
+  <div class="hero__scroll-hint">scroll</div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECCIÓN 2 — PARA QUIÉN ES (Tabs)
+     ══════════════════════════════════════════════════════════ -->
+<section id="who" class="section section--raised section--who">
+  <div class="container">
+    <div class="who-grid">
+
+      <!-- Left: copy -->
+      <div>
+        <p class="label fade-scroll">Para quién es</p>
+        <div class="divider fade-scroll"></div>
+        <h2 class="headline fade-scroll">
+          No para todos.<br />
+          Para los que ya<br />
+          <em>normalizaron</em> no dormir.
+        </h2>
+        <p class="subhead fade-scroll" style="margin-top:1.5rem;">
+          Si llevas meses durmiendo mal y tu cuerpo ya lo da por hecho,
+          esto es exactamente para ti.
+        </p>
+      </div>
+
+      <!-- Right: tabs -->
+      <div class="who-tabs" data-tabs>
+        <div class="tabs-header">
+          <button class="tab-btn">Profesional</button>
+          <button class="tab-btn">Emprendedor</button>
+          <button class="tab-btn">Cualquier persona</button>
+        </div>
+
+        <div class="tabs-panels">
+
+          <div class="tab-panel">
+            <div class="card">
+              <p class="label" style="margin-bottom:1rem;">◈ El ejecutivo</p>
+              <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;margin-bottom:1rem;">
+                El que no puede apagar la mente
+              </h3>
+              <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7;margin-bottom:1.5rem;">
+                Llevas meses funcionando a pleno rendimiento. Tu cuerpo aguanta,
+                pero cada mañana despiertas más tenso que la noche anterior.
+                No es estrés mental: es estrés acumulado en tejido.
+              </p>
+              <div style="padding:1rem;background:var(--accent-glow);border-radius:8px;border-left:2px solid var(--accent);">
+                <p style="font-size:0.8rem;color:var(--text-muted);">
+                  <strong style="color:var(--accent);">Síntomas típicos:</strong>
+                  Despertares frecuentes, tensión en cuello y hombros,
+                  sensación de no haber descansado.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel">
+            <div class="card">
+              <p class="label" style="margin-bottom:1rem;">◇ El emprendedor</p>
+              <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;margin-bottom:1rem;">
+                El que construye de día y no duerme de noche
+              </h3>
+              <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7;margin-bottom:1.5rem;">
+                Tu mente tiene mil pestañas abiertas. Tu cuerpo las paga todas.
+                El insomnio no es un hábito, es una acumulación física
+                que requiere un reset real.
+              </p>
+              <div style="padding:1rem;background:var(--accent-glow);border-radius:8px;border-left:2px solid var(--accent);">
+                <p style="font-size:0.8rem;color:var(--text-muted);">
+                  <strong style="color:var(--accent);">Síntomas típicos:</strong>
+                  Dificultad para conciliar el sueño, mandíbula apretada,
+                  ansiedad física al acostarse.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel">
+            <div class="card">
+              <p class="label" style="margin-bottom:1rem;">○ Cualquier persona</p>
+              <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;margin-bottom:1rem;">
+                El que lleva meses durmiendo mal y ya lo normalizó
+              </h3>
+              <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7;margin-bottom:1.5rem;">
+                Le dijiste a todos que "dormís poco pero estás bien".
+                No estás bien. Tu sistema nervioso está en alerta permanente
+                y tu cuerpo necesita que alguien lo ayude a soltar.
+              </p>
+              <div style="padding:1rem;background:var(--accent-glow);border-radius:8px;border-left:2px solid var(--accent);">
+                <p style="font-size:0.8rem;color:var(--text-muted);">
+                  <strong style="color:var(--accent);">Síntomas típicos:</strong>
+                  Sueño superficial, molestias al despertar,
+                  depender de pastillas o suplementos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.tabs-panels -->
+      </div><!-- /[data-tabs] -->
+
+    </div><!-- /.who-grid -->
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECCIÓN 3 — EL PROGRAMA (Timeline semanal)
+     ══════════════════════════════════════════════════════════ -->
+<section id="program" class="section section--program">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:4rem;">
+      <p class="label">El programa</p>
+      <div class="divider" style="margin:1rem auto;"></div>
+      <h2 class="headline">
+        4 semanas.<br /><em>Un sistema.</em>
+      </h2>
+      <p class="subhead" style="margin:1.5rem auto 0;">
+        No son 4 masajes repetidos. Cada semana tiene un objetivo distinto,
+        una capa de trabajo diferente y un entregable concreto.
+      </p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline__item">
+        <div class="timeline__num">01</div>
+        <div class="timeline__dur">75 min</div>
+        <h3 class="timeline__title">Diagnóstico y activación</h3>
+        <p class="timeline__desc">
+          Mapeamos tu tensión crónica. Trabajamos la capa superficial —
+          trapecios, cuello, lumbar. Entrega de Guía de Rutina Nocturna personalizada.
+        </p>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__num">02</div>
+        <div class="timeline__dur">75 min</div>
+        <h3 class="timeline__title">Sistema nervioso profundo</h3>
+        <p class="timeline__desc">
+          Occipital, base de cráneo, psoas. La sesión de mayor cambio
+          perceptible. Check-in por WhatsApp al día 3 post-sesión.
+        </p>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__num">03</div>
+        <div class="timeline__dur">60 min</div>
+        <h3 class="timeline__title">Integración y regulación</h3>
+        <p class="timeline__desc">
+          Consolidamos lo ganado. Puntos de retención residual.
+          Entrega de audio guiado de 10 min con voz real para usar cada noche.
+        </p>
+      </div>
+
+      <div class="timeline__item">
+        <div class="timeline__num">04</div>
+        <div class="timeline__dur">60 min</div>
+        <h3 class="timeline__title">Cierre y plan de mantenimiento</h3>
+        <p class="timeline__desc">
+          Comparativa semana 1 vs 4. Evaluación completa.
+          Entrega de Plan de Mantenimiento Personalizado — tu hoja de ruta.
+        </p>
+      </div>
+
+    </div><!-- /.timeline -->
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECCIÓN 4 — NÚMEROS / KPIs
+     ══════════════════════════════════════════════════════════ -->
+<section class="section section--raised section--kpis">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <p class="label">Resultados</p>
+      <div class="divider" style="margin:1rem auto;"></div>
+      <h2 class="headline"><em>Los números</em> hablan.</h2>
+    </div>
+
+    <div class="kpi-grid">
+
+      <div class="kpi-card">
+        <span class="kpi-value">
+          <span data-count="94" data-suffix="%" data-duration="2.2">0%</span>
+        </span>
+        <p class="kpi-label">Clientes duermen mejor desde semana 2</p>
+      </div>
+
+      <div class="kpi-card">
+        <span class="kpi-value">
+          <span data-count="4" data-suffix=" sem" data-duration="1.5">0</span>
+        </span>
+        <p class="kpi-label">Duración del programa completo</p>
+      </div>
+
+      <div class="kpi-card">
+        <span class="kpi-value">
+          <span data-count="8" data-suffix="h" data-decimals="1" data-duration="2">0h</span>
+        </span>
+        <p class="kpi-label">Promedio de sueño recuperado por noche</p>
+      </div>
+
+      <div class="kpi-card">
+        <span class="kpi-value">
+          <span data-count="100" data-suffix="%" data-duration="1.8">0%</span>
+        </span>
+        <p class="kpi-label">Sesiones con protocolo personalizado</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECCIÓN 5 — GRÁFICO DE EVOLUCIÓN
+     ══════════════════════════════════════════════════════════ -->
+<section class="section section--chart">
+  <div class="container">
+    <div class="grid-2" style="align-items:center;gap:4rem;">
+
+      <div>
+        <p class="label fade-up">Evolución típica</p>
+        <div class="divider fade-up"></div>
+        <h2 class="headline fade-up">
+          Lo que cambia<br />semana a <em>semana.</em>
+        </h2>
+        <p class="subhead fade-up" style="margin-top:1.5rem;">
+          La calidad de sueño sube de forma progresiva mientras la tensión
+          corporal baja. El cambio más notorio ocurre entre semana 2 y semana 3.
+        </p>
+      </div>
+
+      <div class="card fade-up">
+        <div class="chart-wrap">
+          <canvas id="growth-chart"></canvas>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECCIÓN 6 — QUÉ INCLUYE
+     ══════════════════════════════════════════════════════════ -->
+<section class="section section--raised section--includes">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <p class="label">Todo incluido</p>
+      <div class="divider" style="margin:1rem auto;"></div>
+      <h2 class="headline">No es un masaje.<br /><em>Es un sistema.</em></h2>
+    </div>
+
+    <div class="includes-grid">
+
+      <div class="include-item">
+        <div class="include-icon">◉</div>
+        <p class="include-text">
+          <strong>4 sesiones presenciales</strong><br />
+          75 / 75 / 60 / 60 min — cada una con objetivo distinto.
+        </p>
+      </div>
+
+      <div class="include-item">
+        <div class="include-icon">◈</div>
+        <p class="include-text">
+          <strong>Evaluación inicial personalizada</strong><br />
+          Formulario enviado antes de la 1ª sesión. Llegamos con un plan.
+        </p>
+      </div>
+
+      <div class="include-item">
+        <div class="include-icon">◇</div>
+        <p class="include-text">
+          <strong>Guía de Rutina Nocturna (PDF)</strong><br />
+          15 minutos antes de dormir. Instrucciones específicas, no genéricas.
+        </p>
+      </div>
+
+      <div class="include-item">
+        <div class="include-icon">○</div>
+        <p class="include-text">
+          <strong>Audio guiado de 10 min</strong><br />
+          Voz real, no IA. Para usar cada noche. Nadie más tiene esto.
+        </p>
+      </div>
+
+      <div class="include-item">
+        <div class="include-icon">◉</div>
+        <p class="include-text">
+          <strong>2 check-ins por WhatsApp</strong><br />
+          Semana 2 y semana 3. Respuesta personalizada, no automatizada.
+        </p>
+      </div>
+
+      <div class="include-item">
+        <div class="include-icon">◈</div>
+        <p class="include-text">
+          <strong>Plan de Mantenimiento Personalizado</strong><br />
+          Tu hoja de ruta al cierre. El puente hacia adelante.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECCIÓN 7 — PITCHES / FRASES
+     ══════════════════════════════════════════════════════════ -->
+<section class="section section--pitches">
+  <div class="container" style="max-width:760px;">
+    <p class="label" style="margin-bottom:1rem;">En una línea</p>
+    <div class="divider"></div>
+    <div class="pitches" style="margin-top:2.5rem;">
+      <blockquote class="pitch-item">
+        Si llevas meses durmiendo mal, tu cuerpo está pidiendo ayuda.
+        En 4 semanas lo resolvemos.
+      </blockquote>
+      <blockquote class="pitch-item">
+        El estrés no desaparece con respirar. Se acumula en tu cuerpo
+        hasta que no puedes dormir. Trabajo exactamente eso.
+      </blockquote>
+      <blockquote class="pitch-item">
+        No te vendo masajes. Te ayudo a recuperar el descanso que perdiste.
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECCIÓN 8 — PRECIO
+     ══════════════════════════════════════════════════════════ -->
+<section id="price" class="section section--raised section--price">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <p class="label">Inversión</p>
+      <div class="divider" style="margin:1rem auto;"></div>
+      <h2 class="headline">Un mes de trabajo.<br /><em>Meses de resultado.</em></h2>
+    </div>
+
+    <div class="price-card">
+      <div class="price-badge">Lanzamiento — 5 lugares</div>
+      <div class="price-amount">
+        $220.000 <span>–</span> $320.000
+      </div>
+      <div class="price-currency">CLP · Programa completo de 4 semanas</div>
+
+      <a href="mailto:hola@tucorreo.com?subject=Quiero reservar mi lugar en Cuerpo que Descansa"
+         class="btn btn--primary" style="width:100%;justify-content:center;margin-bottom:0.75rem;">
+        Reservar mi lugar →
+      </a>
+      <a href="https://wa.me/56900000000?text=Hola,%20quiero%20info%20sobre%20Cuerpo%20que%20Descansa"
+         target="_blank"
+         class="btn btn--ghost" style="width:100%;justify-content:center;">
+        Consultar por WhatsApp
+      </a>
+
+      <p class="price-note">
+        Precio de lanzamiento para primeros 5 clientes.
+        Incluye todo lo detallado en el programa.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     SECCIÓN 9 — CIERRE (pinned)
+     ══════════════════════════════════════════════════════════ -->
+<section class="section--closing closing">
+  <div class="closing__mark" aria-hidden="true">Descansa</div>
+
+  <div class="closing__content">
+    <p class="label" style="margin-bottom:1.5rem;">Tu cuerpo sabe cómo.</p>
+    <h2 class="closing__title">
+      Solo necesita<br />que alguien<br /><em>le enseñe a soltar.</em>
+    </h2>
+    <a href="#price" class="btn btn--primary" style="margin-top:2rem;">
+      Empezar ahora →
+    </a>
+  </div>
+</section>
+
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer style="
+  padding: 3rem 2rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+">
+  <p style="font-family:var(--font-display);font-size:1.1rem;color:var(--text-muted);">
+    Cuerpo que <em style="font-style:italic;color:var(--accent);">Descansa</em>
+  </p>
+  <p style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);letter-spacing:0.08em;">
+    © 2025 · Todos los derechos reservados
+  </p>
+  <a href="../../index.html"
+     style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);letter-spacing:0.08em;">
+    ← Volver al menú
+  </a>
+</footer>
+
+</body>
+</html>
