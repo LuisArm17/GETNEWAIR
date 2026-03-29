@@ -3,48 +3,131 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cuerpo que Descansa — Programa de 4 Semanas</title>
-  <meta name="description" content="Un protocolo de 4 semanas para recuperar el descanso que perdiste. Trabajo corporal especializado en estrés y sueño." />
+  <title>Hernán · Masajista Funcional — Cuerpo que Descansa</title>
+  <meta name="description" content="Programa de 4 semanas para recuperar el descanso. Trabajo corporal especializado en estrés y sistema nervioso." />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="../../shared/css/base.css" />
   <link rel="stylesheet" href="css/theme.css" />
 
-  <!-- GSAP + ScrollTrigger -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-
-  <!-- Chart.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" defer></script>
-
-  <!-- Main JS (module so it can import shared/core.js) -->
   <script type="module" src="js/main.js" defer></script>
 </head>
 <body>
 
-<!-- ── Progress Bar ─────────────────────────────────────── -->
 <div id="progress-bar"></div>
 
-<!-- ── Nav ──────────────────────────────────────────────── -->
+<!-- ════════════════════════════════════════════
+     NAV
+     ════════════════════════════════════════════ -->
 <nav class="nav">
-  <a href="../../index.html" class="nav__logo">
-    Cuerpo que <span>Descansa</span>
+  <div class="nav__logo">
+    <span class="nav__logo-name">Hernán <span>Masajista</span></span>
+    <span class="nav__logo-sub">Masajista Funcional · Santiago</span>
+  </div>
+
+  <div class="nav__links">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/56923953959?text=Hola%20Hernán,%20quiero%20info%20sobre%20el%20programa%20Cuerpo%20que%20Descansa"
+       target="_blank" class="nav__link">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.562 4.14 1.538 5.876L0 24l6.326-1.519A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.028-1.384l-.36-.214-3.753.902.944-3.648-.234-.373A9.818 9.818 0 1112 21.818z"/>
+      </svg>
+      +56 9 2395 3959
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://instagram.com/hernan.masajistafuncional"
+       target="_blank" class="nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+      </svg>
+      @hernan.masajistafuncional
+    </a>
+
+    <!-- Google -->
+    <a href="https://share.google/WMo9tmKaBXn48WEws"
+       target="_blank" class="nav__link">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+      </svg>
+      Reseñas Google
+    </a>
+  </div>
+
+  <a href="https://wa.me/56923953959?text=Hola%20Hernán,%20quiero%20reservar%20mi%20lugar%20en%20Cuerpo%20que%20Descansa"
+     target="_blank" class="nav__cta">
+    Reservar lugar
   </a>
-  <a href="#price" class="nav__cta">Reservar lugar</a>
 </nav>
 
 
-<!-- ══════════════════════════════════════════════════════════
-     SECCIÓN 1 — HERO
-     ══════════════════════════════════════════════════════════ -->
-<section class="hero section">
-  <div class="container">
-    <p class="hero__eyebrow">Programa de 4 semanas</p>
+<!-- ════════════════════════════════════════════
+     SECCIÓN 1 — HERO (Cielo post-lluvia)
+     ════════════════════════════════════════════ -->
+<section class="hero">
+
+  <!-- Cielo -->
+  <div class="hero__sky"></div>
+
+  <!-- Sol + rayos -->
+  <div class="hero__sunrays"></div>
+  <div class="hero__sun"></div>
+
+  <!-- Nubes -->
+  <div class="cloud-group cloud-1">
+    <div class="c-base">
+      <div class="c-bump"></div>
+      <div class="c-bump"></div>
+      <div class="c-bump"></div>
+    </div>
+  </div>
+  <div class="cloud-group cloud-2">
+    <div class="c-base">
+      <div class="c-bump"></div>
+      <div class="c-bump"></div>
+      <div class="c-bump"></div>
+    </div>
+  </div>
+  <div class="cloud-group cloud-3">
+    <div class="c-base">
+      <div class="c-bump"></div>
+      <div class="c-bump"></div>
+      <div class="c-bump"></div>
+    </div>
+  </div>
+  <div class="cloud-group cloud-4">
+    <div class="c-base">
+      <div class="c-bump"></div>
+      <div class="c-bump"></div>
+      <div class="c-bump"></div>
+    </div>
+  </div>
+  <div class="cloud-group cloud-5">
+    <div class="c-base">
+      <div class="c-bump"></div>
+      <div class="c-bump"></div>
+      <div class="c-bump"></div>
+    </div>
+  </div>
+
+  <!-- Lluvia residual (generada por JS) -->
+  <div class="raindrops" id="raindrops"></div>
+
+  <!-- Fade al negro -->
+  <div class="hero__fade"></div>
+
+  <!-- Contenido principal -->
+  <div class="hero__content">
+    <p class="hero__eyebrow">Programa de 4 semanas · Santiago, Chile</p>
 
     <h1 class="hero__title">
       El cuerpo que<br />
@@ -58,40 +141,81 @@
       En 4 semanas, lo resolvemos juntos.
     </p>
 
-    <div class="hero__actions">
-      <a href="#program" class="btn btn--primary">Ver el programa ↓</a>
-      <a href="#who"     class="btn btn--ghost">¿Para quién es?</a>
+    <!-- Pills de contacto -->
+    <div class="hero__contact">
+      <a href="https://wa.me/56923953959?text=Hola%20Hernán,%20quiero%20info%20sobre%20Cuerpo%20que%20Descansa"
+         target="_blank" class="contact-pill contact-pill--wa">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.562 4.14 1.538 5.876L0 24l6.326-1.519A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.028-1.384l-.36-.214-3.753.902.944-3.648-.234-.373A9.818 9.818 0 1112 21.818z"/>
+        </svg>
+        +56 9 2395 3959
+      </a>
+
+      <a href="https://instagram.com/hernan.masajistafuncional"
+         target="_blank" class="contact-pill contact-pill--ig">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+        </svg>
+        @hernan.masajistafuncional
+      </a>
+
+      <a href="https://share.google/WMo9tmKaBXn48WEws"
+         target="_blank" class="contact-pill contact-pill--google">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="13" height="13">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        5.0 ★★★★★ Google
+      </a>
+    </div>
+
+    <!-- CTA -->
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="#program"
+         class="btn btn--gold">
+        Ver el programa ↓
+      </a>
+      <a href="https://wa.me/56923953959?text=Hola%20Hernán,%20quiero%20reservar%20un%20lugar"
+         target="_blank" class="btn btn--wa">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.562 4.14 1.538 5.876L0 24l6.326-1.519A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.028-1.384l-.36-.214-3.753.902.944-3.648-.234-.373A9.818 9.818 0 1112 21.818z"/>
+        </svg>
+        Escribir por WhatsApp
+      </a>
     </div>
   </div>
 
-  <div class="hero__scroll-hint">scroll</div>
+  <div class="hero__scroll">scroll</div>
 </section>
 
+<div class="gold-line"></div>
 
-<!-- ══════════════════════════════════════════════════════════
-     SECCIÓN 2 — PARA QUIÉN ES (Tabs)
-     ══════════════════════════════════════════════════════════ -->
-<section id="who" class="section section--raised section--who">
+
+<!-- ════════════════════════════════════════════
+     SECCIÓN 2 — PARA QUIÉN ES
+     ════════════════════════════════════════════ -->
+<section id="who" class="section section--raised" style="padding:7rem 0;">
   <div class="container">
     <div class="who-grid">
 
-      <!-- Left: copy -->
       <div>
-        <p class="label fade-scroll">Para quién es</p>
-        <div class="divider fade-scroll"></div>
-        <h2 class="headline fade-scroll">
+        <div class="section-label">Para quién es</div>
+        <h2 class="section-title" style="margin-bottom:1.5rem;">
           No para todos.<br />
           Para los que ya<br />
           <em>normalizaron</em> no dormir.
         </h2>
-        <p class="subhead fade-scroll" style="margin-top:1.5rem;">
+        <p class="subhead" style="font-family:var(--font-body);font-size:1rem;color:var(--text-muted);line-height:1.75;font-weight:300;">
           Si llevas meses durmiendo mal y tu cuerpo ya lo da por hecho,
           esto es exactamente para ti.
         </p>
       </div>
 
-      <!-- Right: tabs -->
-      <div class="who-tabs" data-tabs>
+      <div data-tabs>
         <div class="tabs-header">
           <button class="tab-btn">Profesional</button>
           <button class="tab-btn">Emprendedor</button>
@@ -102,20 +226,17 @@
 
           <div class="tab-panel">
             <div class="card">
-              <p class="label" style="margin-bottom:1rem;">◈ El ejecutivo</p>
-              <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;margin-bottom:1rem;">
-                El que no puede apagar la mente
-              </h3>
-              <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7;margin-bottom:1.5rem;">
+              <p style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;">◈ El ejecutivo</p>
+              <h3 style="font-family:var(--font-display);font-size:1.35rem;font-weight:400;margin-bottom:1rem;color:var(--text);">El que no puede apagar la mente</h3>
+              <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.7;margin-bottom:1.5rem;">
                 Llevas meses funcionando a pleno rendimiento. Tu cuerpo aguanta,
-                pero cada mañana despiertas más tenso que la noche anterior.
-                No es estrés mental: es estrés acumulado en tejido.
+                pero cada mañana despiertas más tenso. No es estrés mental: es estrés
+                acumulado en tejido.
               </p>
-              <div style="padding:1rem;background:var(--accent-glow);border-radius:8px;border-left:2px solid var(--accent);">
-                <p style="font-size:0.8rem;color:var(--text-muted);">
+              <div style="padding:1rem 1.25rem;background:var(--accent-glow);border-radius:8px;border-left:2px solid var(--accent);">
+                <p style="font-size:0.78rem;color:var(--text-muted);">
                   <strong style="color:var(--accent);">Síntomas típicos:</strong>
-                  Despertares frecuentes, tensión en cuello y hombros,
-                  sensación de no haber descansado.
+                  Despertares frecuentes, tensión en cuello y hombros, sensación de no haber descansado.
                 </p>
               </div>
             </div>
@@ -123,20 +244,16 @@
 
           <div class="tab-panel">
             <div class="card">
-              <p class="label" style="margin-bottom:1rem;">◇ El emprendedor</p>
-              <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;margin-bottom:1rem;">
-                El que construye de día y no duerme de noche
-              </h3>
-              <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7;margin-bottom:1.5rem;">
+              <p style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;">◇ El emprendedor</p>
+              <h3 style="font-family:var(--font-display);font-size:1.35rem;font-weight:400;margin-bottom:1rem;color:var(--text);">El que construye de día y no duerme de noche</h3>
+              <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.7;margin-bottom:1.5rem;">
                 Tu mente tiene mil pestañas abiertas. Tu cuerpo las paga todas.
-                El insomnio no es un hábito, es una acumulación física
-                que requiere un reset real.
+                El insomnio no es un hábito — es una acumulación física que requiere un reset real.
               </p>
-              <div style="padding:1rem;background:var(--accent-glow);border-radius:8px;border-left:2px solid var(--accent);">
-                <p style="font-size:0.8rem;color:var(--text-muted);">
+              <div style="padding:1rem 1.25rem;background:var(--accent-glow);border-radius:8px;border-left:2px solid var(--accent);">
+                <p style="font-size:0.78rem;color:var(--text-muted);">
                   <strong style="color:var(--accent);">Síntomas típicos:</strong>
-                  Dificultad para conciliar el sueño, mandíbula apretada,
-                  ansiedad física al acostarse.
+                  Dificultad para conciliar el sueño, mandíbula apretada, ansiedad física al acostarse.
                 </p>
               </div>
             </div>
@@ -144,165 +261,21 @@
 
           <div class="tab-panel">
             <div class="card">
-              <p class="label" style="margin-bottom:1rem;">○ Cualquier persona</p>
-              <h3 style="font-family:var(--font-display);font-size:1.4rem;font-weight:400;margin-bottom:1rem;">
-                El que lleva meses durmiendo mal y ya lo normalizó
-              </h3>
-              <p style="color:var(--text-muted);font-size:0.9rem;line-height:1.7;margin-bottom:1.5rem;">
-                Le dijiste a todos que "dormís poco pero estás bien".
-                No estás bien. Tu sistema nervioso está en alerta permanente
-                y tu cuerpo necesita que alguien lo ayude a soltar.
+              <p style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem;">○ Cualquier persona</p>
+              <h3 style="font-family:var(--font-display);font-size:1.35rem;font-weight:400;margin-bottom:1rem;color:var(--text);">El que lleva meses durmiendo mal y ya lo normalizó</h3>
+              <p style="color:var(--text-muted);font-size:0.88rem;line-height:1.7;margin-bottom:1.5rem;">
+                Le dijiste a todos que "dormís poco pero estás bien". No estás bien.
+                Tu sistema nervioso está en alerta permanente.
               </p>
-              <div style="padding:1rem;background:var(--accent-glow);border-radius:8px;border-left:2px solid var(--accent);">
-                <p style="font-size:0.8rem;color:var(--text-muted);">
+              <div style="padding:1rem 1.25rem;background:var(--accent-glow);border-radius:8px;border-left:2px solid var(--accent);">
+                <p style="font-size:0.78rem;color:var(--text-muted);">
                   <strong style="color:var(--accent);">Síntomas típicos:</strong>
-                  Sueño superficial, molestias al despertar,
-                  depender de pastillas o suplementos.
+                  Sueño superficial, molestias al despertar, depender de pastillas o suplementos.
                 </p>
               </div>
             </div>
           </div>
 
-        </div><!-- /.tabs-panels -->
-      </div><!-- /[data-tabs] -->
-
-    </div><!-- /.who-grid -->
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     SECCIÓN 3 — EL PROGRAMA (Timeline semanal)
-     ══════════════════════════════════════════════════════════ -->
-<section id="program" class="section section--program">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:4rem;">
-      <p class="label">El programa</p>
-      <div class="divider" style="margin:1rem auto;"></div>
-      <h2 class="headline">
-        4 semanas.<br /><em>Un sistema.</em>
-      </h2>
-      <p class="subhead" style="margin:1.5rem auto 0;">
-        No son 4 masajes repetidos. Cada semana tiene un objetivo distinto,
-        una capa de trabajo diferente y un entregable concreto.
-      </p>
-    </div>
-
-    <div class="timeline">
-
-      <div class="timeline__item">
-        <div class="timeline__num">01</div>
-        <div class="timeline__dur">75 min</div>
-        <h3 class="timeline__title">Diagnóstico y activación</h3>
-        <p class="timeline__desc">
-          Mapeamos tu tensión crónica. Trabajamos la capa superficial —
-          trapecios, cuello, lumbar. Entrega de Guía de Rutina Nocturna personalizada.
-        </p>
-      </div>
-
-      <div class="timeline__item">
-        <div class="timeline__num">02</div>
-        <div class="timeline__dur">75 min</div>
-        <h3 class="timeline__title">Sistema nervioso profundo</h3>
-        <p class="timeline__desc">
-          Occipital, base de cráneo, psoas. La sesión de mayor cambio
-          perceptible. Check-in por WhatsApp al día 3 post-sesión.
-        </p>
-      </div>
-
-      <div class="timeline__item">
-        <div class="timeline__num">03</div>
-        <div class="timeline__dur">60 min</div>
-        <h3 class="timeline__title">Integración y regulación</h3>
-        <p class="timeline__desc">
-          Consolidamos lo ganado. Puntos de retención residual.
-          Entrega de audio guiado de 10 min con voz real para usar cada noche.
-        </p>
-      </div>
-
-      <div class="timeline__item">
-        <div class="timeline__num">04</div>
-        <div class="timeline__dur">60 min</div>
-        <h3 class="timeline__title">Cierre y plan de mantenimiento</h3>
-        <p class="timeline__desc">
-          Comparativa semana 1 vs 4. Evaluación completa.
-          Entrega de Plan de Mantenimiento Personalizado — tu hoja de ruta.
-        </p>
-      </div>
-
-    </div><!-- /.timeline -->
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     SECCIÓN 4 — NÚMEROS / KPIs
-     ══════════════════════════════════════════════════════════ -->
-<section class="section section--raised section--kpis">
-  <div class="container">
-    <div style="text-align:center;margin-bottom:3rem;">
-      <p class="label">Resultados</p>
-      <div class="divider" style="margin:1rem auto;"></div>
-      <h2 class="headline"><em>Los números</em> hablan.</h2>
-    </div>
-
-    <div class="kpi-grid">
-
-      <div class="kpi-card">
-        <span class="kpi-value">
-          <span data-count="94" data-suffix="%" data-duration="2.2">0%</span>
-        </span>
-        <p class="kpi-label">Clientes duermen mejor desde semana 2</p>
-      </div>
-
-      <div class="kpi-card">
-        <span class="kpi-value">
-          <span data-count="4" data-suffix=" sem" data-duration="1.5">0</span>
-        </span>
-        <p class="kpi-label">Duración del programa completo</p>
-      </div>
-
-      <div class="kpi-card">
-        <span class="kpi-value">
-          <span data-count="8" data-suffix="h" data-decimals="1" data-duration="2">0h</span>
-        </span>
-        <p class="kpi-label">Promedio de sueño recuperado por noche</p>
-      </div>
-
-      <div class="kpi-card">
-        <span class="kpi-value">
-          <span data-count="100" data-suffix="%" data-duration="1.8">0%</span>
-        </span>
-        <p class="kpi-label">Sesiones con protocolo personalizado</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════════════════
-     SECCIÓN 5 — GRÁFICO DE EVOLUCIÓN
-     ══════════════════════════════════════════════════════════ -->
-<section class="section section--chart">
-  <div class="container">
-    <div class="grid-2" style="align-items:center;gap:4rem;">
-
-      <div>
-        <p class="label fade-up">Evolución típica</p>
-        <div class="divider fade-up"></div>
-        <h2 class="headline fade-up">
-          Lo que cambia<br />semana a <em>semana.</em>
-        </h2>
-        <p class="subhead fade-up" style="margin-top:1.5rem;">
-          La calidad de sueño sube de forma progresiva mientras la tensión
-          corporal baja. El cambio más notorio ocurre entre semana 2 y semana 3.
-        </p>
-      </div>
-
-      <div class="card fade-up">
-        <div class="chart-wrap">
-          <canvas id="growth-chart"></canvas>
         </div>
       </div>
 
@@ -310,172 +283,258 @@
   </div>
 </section>
 
+<div class="gold-line"></div>
 
-<!-- ══════════════════════════════════════════════════════════
-     SECCIÓN 6 — QUÉ INCLUYE
-     ══════════════════════════════════════════════════════════ -->
-<section class="section section--raised section--includes">
+
+<!-- ════════════════════════════════════════════
+     SECCIÓN 3 — EL PROGRAMA
+     ════════════════════════════════════════════ -->
+<section id="program" class="section" style="padding:7rem 0;">
   <div class="container">
-    <div style="text-align:center;margin-bottom:3rem;">
-      <p class="label">Todo incluido</p>
-      <div class="divider" style="margin:1rem auto;"></div>
-      <h2 class="headline">No es un masaje.<br /><em>Es un sistema.</em></h2>
+    <div class="section-header">
+      <div class="section-label">El programa</div>
+      <h2 class="section-title">4 semanas. <em>Un sistema.</em></h2>
+      <p style="margin:1.5rem auto 0;max-width:52ch;color:var(--text-muted);font-size:0.95rem;line-height:1.7;">
+        No son 4 masajes repetidos. Cada semana tiene un objetivo distinto,
+        una capa de trabajo diferente y un entregable concreto.
+      </p>
     </div>
 
-    <div class="includes-grid">
+    <div class="timeline">
+      <div class="timeline__item">
+        <div class="timeline__num">01</div>
+        <div class="timeline__dur">75 min</div>
+        <h3 class="timeline__title">Diagnóstico y activación</h3>
+        <p class="timeline__desc">Mapeamos tu tensión crónica. Trabajamos la capa superficial — trapecios, cuello, lumbar. Entrega de Guía de Rutina Nocturna personalizada.</p>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__num">02</div>
+        <div class="timeline__dur">75 min</div>
+        <h3 class="timeline__title">Sistema nervioso profundo</h3>
+        <p class="timeline__desc">Occipital, base de cráneo, psoas. La sesión de mayor cambio perceptible. Check-in por WhatsApp al día 3 post-sesión.</p>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__num">03</div>
+        <div class="timeline__dur">60 min</div>
+        <h3 class="timeline__title">Integración y regulación</h3>
+        <p class="timeline__desc">Consolidamos lo ganado. Puntos de retención residual. Entrega de audio guiado de 10 min con voz real para usar cada noche.</p>
+      </div>
+      <div class="timeline__item">
+        <div class="timeline__num">04</div>
+        <div class="timeline__dur">60 min</div>
+        <h3 class="timeline__title">Cierre y plan de mantenimiento</h3>
+        <p class="timeline__desc">Comparativa semana 1 vs 4. Evaluación completa. Entrega de Plan de Mantenimiento Personalizado — tu hoja de ruta.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<div class="gold-line"></div>
+
+
+<!-- ════════════════════════════════════════════
+     SECCIÓN 4 — KPIs
+     ════════════════════════════════════════════ -->
+<section class="section section--raised" style="padding:7rem 0;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Resultados</div>
+      <h2 class="section-title"><em>Los números</em> hablan.</h2>
+    </div>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <span class="kpi-value"><span data-count="94" data-suffix="%" data-duration="2.2">0%</span></span>
+        <p class="kpi-label">Clientes duermen mejor desde semana 2</p>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-value"><span data-count="4" data-suffix=" sem" data-duration="1.5">0</span></span>
+        <p class="kpi-label">Duración del programa completo</p>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-value"><span data-count="8" data-suffix="h" data-decimals="1" data-duration="2">0h</span></span>
+        <p class="kpi-label">Promedio de sueño recuperado por noche</p>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-value"><span data-count="5" data-suffix="★" data-duration="1.8">0</span></span>
+        <p class="kpi-label">Calificación Google</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-line"></div>
+
+
+<!-- ════════════════════════════════════════════
+     SECCIÓN 5 — GRÁFICO
+     ════════════════════════════════════════════ -->
+<section class="section" style="padding:7rem 0;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div>
+        <div class="section-label" style="justify-content:flex-start;">Evolución típica</div>
+        <h2 class="section-title" style="margin:1.25rem 0;">
+          Lo que cambia<br />semana a <em>semana.</em>
+        </h2>
+        <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.75;">
+          La calidad de sueño sube de forma progresiva mientras la tensión
+          corporal baja. El cambio más notorio ocurre entre semana 2 y semana 3.
+        </p>
+      </div>
+      <div class="card">
+        <div class="chart-wrap">
+          <canvas id="growth-chart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-line"></div>
+
+
+<!-- ════════════════════════════════════════════
+     SECCIÓN 6 — QUÉ INCLUYE
+     ════════════════════════════════════════════ -->
+<section class="section section--raised" style="padding:7rem 0;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Todo incluido</div>
+      <h2 class="section-title">No es un masaje.<br /><em>Es un sistema.</em></h2>
+    </div>
+    <div class="includes-grid">
       <div class="include-item">
         <div class="include-icon">◉</div>
-        <p class="include-text">
-          <strong>4 sesiones presenciales</strong><br />
-          75 / 75 / 60 / 60 min — cada una con objetivo distinto.
-        </p>
+        <p class="include-text"><strong>4 sesiones presenciales</strong><br />75 / 75 / 60 / 60 min — cada una con objetivo distinto.</p>
       </div>
-
       <div class="include-item">
         <div class="include-icon">◈</div>
-        <p class="include-text">
-          <strong>Evaluación inicial personalizada</strong><br />
-          Formulario enviado antes de la 1ª sesión. Llegamos con un plan.
-        </p>
+        <p class="include-text"><strong>Evaluación inicial personalizada</strong><br />Formulario enviado antes de la 1ª sesión. Llegamos con un plan.</p>
       </div>
-
       <div class="include-item">
         <div class="include-icon">◇</div>
-        <p class="include-text">
-          <strong>Guía de Rutina Nocturna (PDF)</strong><br />
-          15 minutos antes de dormir. Instrucciones específicas, no genéricas.
-        </p>
+        <p class="include-text"><strong>Guía de Rutina Nocturna (PDF)</strong><br />15 minutos antes de dormir. Instrucciones específicas, no genéricas.</p>
       </div>
-
       <div class="include-item">
         <div class="include-icon">○</div>
-        <p class="include-text">
-          <strong>Audio guiado de 10 min</strong><br />
-          Voz real, no IA. Para usar cada noche. Nadie más tiene esto.
-        </p>
+        <p class="include-text"><strong>Audio guiado de 10 min</strong><br />Voz real, no IA. Para usar cada noche. Nadie más tiene esto.</p>
       </div>
-
       <div class="include-item">
         <div class="include-icon">◉</div>
-        <p class="include-text">
-          <strong>2 check-ins por WhatsApp</strong><br />
-          Semana 2 y semana 3. Respuesta personalizada, no automatizada.
-        </p>
+        <p class="include-text"><strong>2 check-ins por WhatsApp</strong><br />Semana 2 y semana 3. Respuesta personalizada, no automatizada.</p>
       </div>
-
       <div class="include-item">
         <div class="include-icon">◈</div>
-        <p class="include-text">
-          <strong>Plan de Mantenimiento Personalizado</strong><br />
-          Tu hoja de ruta al cierre. El puente hacia adelante.
-        </p>
+        <p class="include-text"><strong>Plan de Mantenimiento Personalizado</strong><br />Tu hoja de ruta al cierre. El puente hacia adelante.</p>
       </div>
-
     </div>
   </div>
 </section>
 
+<div class="gold-line"></div>
 
-<!-- ══════════════════════════════════════════════════════════
-     SECCIÓN 7 — PITCHES / FRASES
-     ══════════════════════════════════════════════════════════ -->
-<section class="section section--pitches">
-  <div class="container" style="max-width:760px;">
-    <p class="label" style="margin-bottom:1rem;">En una línea</p>
-    <div class="divider"></div>
-    <div class="pitches" style="margin-top:2.5rem;">
-      <blockquote class="pitch-item">
-        Si llevas meses durmiendo mal, tu cuerpo está pidiendo ayuda.
-        En 4 semanas lo resolvemos.
-      </blockquote>
-      <blockquote class="pitch-item">
-        El estrés no desaparece con respirar. Se acumula en tu cuerpo
-        hasta que no puedes dormir. Trabajo exactamente eso.
-      </blockquote>
-      <blockquote class="pitch-item">
-        No te vendo masajes. Te ayudo a recuperar el descanso que perdiste.
-      </blockquote>
+
+<!-- ════════════════════════════════════════════
+     SECCIÓN 7 — PITCHES
+     ════════════════════════════════════════════ -->
+<section class="section" style="padding:7rem 0;">
+  <div class="container" style="max-width:780px;">
+    <div class="section-label" style="justify-content:flex-start;margin-bottom:2.5rem;">En una línea</div>
+    <div style="display:flex;flex-direction:column;gap:1rem;">
+      <blockquote class="pitch-item">Si llevas meses durmiendo mal, tu cuerpo está pidiendo ayuda. En 4 semanas lo resolvemos.</blockquote>
+      <blockquote class="pitch-item">El estrés no desaparece con respirar. Se acumula en tu cuerpo hasta que no puedes dormir. Trabajo exactamente eso.</blockquote>
+      <blockquote class="pitch-item">No te vendo masajes. Te ayudo a recuperar el descanso que perdiste.</blockquote>
     </div>
   </div>
 </section>
 
+<div class="gold-line"></div>
 
-<!-- ══════════════════════════════════════════════════════════
+
+<!-- ════════════════════════════════════════════
      SECCIÓN 8 — PRECIO
-     ══════════════════════════════════════════════════════════ -->
-<section id="price" class="section section--raised section--price">
+     ════════════════════════════════════════════ -->
+<section id="price" class="section section--raised" style="padding:7rem 0;">
   <div class="container">
-    <div style="text-align:center;margin-bottom:3rem;">
-      <p class="label">Inversión</p>
-      <div class="divider" style="margin:1rem auto;"></div>
-      <h2 class="headline">Un mes de trabajo.<br /><em>Meses de resultado.</em></h2>
+    <div class="section-header">
+      <div class="section-label">Inversión</div>
+      <h2 class="section-title">Un mes de trabajo.<br /><em>Meses de resultado.</em></h2>
     </div>
 
     <div class="price-card">
-      <div class="price-badge">Lanzamiento — 5 lugares</div>
-      <div class="price-amount">
-        $220.000 <span>–</span> $320.000
-      </div>
+      <div class="price-badge">Lanzamiento — 5 lugares disponibles</div>
+      <div class="price-amount">$220.000 – $320.000</div>
       <div class="price-currency">CLP · Programa completo de 4 semanas</div>
 
-      <a href="mailto:hola@tucorreo.com?subject=Quiero reservar mi lugar en Cuerpo que Descansa"
-         class="btn btn--primary" style="width:100%;justify-content:center;margin-bottom:0.75rem;">
-        Reservar mi lugar →
-      </a>
-      <a href="https://wa.me/56900000000?text=Hola,%20quiero%20info%20sobre%20Cuerpo%20que%20Descansa"
-         target="_blank"
-         class="btn btn--ghost" style="width:100%;justify-content:center;">
-        Consultar por WhatsApp
-      </a>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;position:relative;z-index:1;">
+        <a href="https://wa.me/56923953959?text=Hola%20Hernán,%20quiero%20reservar%20mi%20lugar%20en%20Cuerpo%20que%20Descansa"
+           target="_blank" class="btn btn--gold" style="width:100%;">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.138.562 4.14 1.538 5.876L0 24l6.326-1.519A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.028-1.384l-.36-.214-3.753.902.944-3.648-.234-.373A9.818 9.818 0 1112 21.818z"/>
+          </svg>
+          Reservar por WhatsApp
+        </a>
+        <a href="https://instagram.com/hernan.masajistafuncional"
+           target="_blank" class="btn btn--ghost" style="width:100%;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+          </svg>
+          Ver en Instagram
+        </a>
+        <a href="https://share.google/WMo9tmKaBXn48WEws"
+           target="_blank" class="btn btn--ghost" style="width:100%;border-color:rgba(251,188,4,0.3);color:#fbbc04;">
+          ★★★★★ &nbsp; Ver reseñas en Google
+        </a>
+      </div>
 
-      <p class="price-note">
-        Precio de lanzamiento para primeros 5 clientes.
-        Incluye todo lo detallado en el programa.
-      </p>
+      <p class="price-note">Precio de lanzamiento para los primeros 5 clientes. Incluye todo lo detallado en el programa.</p>
     </div>
   </div>
 </section>
 
 
-<!-- ══════════════════════════════════════════════════════════
+<!-- ════════════════════════════════════════════
      SECCIÓN 9 — CIERRE (pinned)
-     ══════════════════════════════════════════════════════════ -->
-<section class="section--closing closing">
+     ════════════════════════════════════════════ -->
+<section class="closing section">
+  <div class="closing__bg"></div>
   <div class="closing__mark" aria-hidden="true">Descansa</div>
 
   <div class="closing__content">
-    <p class="label" style="margin-bottom:1.5rem;">Tu cuerpo sabe cómo.</p>
+    <p style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent);margin-bottom:1.5rem;">Tu cuerpo sabe cómo</p>
     <h2 class="closing__title">
       Solo necesita<br />que alguien<br /><em>le enseñe a soltar.</em>
     </h2>
-    <a href="#price" class="btn btn--primary" style="margin-top:2rem;">
-      Empezar ahora →
-    </a>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem;">
+      <a href="https://wa.me/56923953959?text=Hola%20Hernán,%20quiero%20empezar"
+         target="_blank" class="btn btn--gold">
+        Empezar ahora →
+      </a>
+      <a href="https://instagram.com/hernan.masajistafuncional"
+         target="_blank" class="btn btn--ghost">
+        Seguirme en Instagram
+      </a>
+    </div>
   </div>
 </section>
 
 
-<!-- ── Footer ─────────────────────────────────────────────── -->
-<footer style="
-  padding: 3rem 2rem;
-  border-top: 1px solid var(--border);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-">
-  <p style="font-family:var(--font-display);font-size:1.1rem;color:var(--text-muted);">
-    Cuerpo que <em style="font-style:italic;color:var(--accent);">Descansa</em>
-  </p>
-  <p style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);letter-spacing:0.08em;">
-    © 2025 · Todos los derechos reservados
-  </p>
-  <a href="../../index.html"
-     style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-muted);letter-spacing:0.08em;">
-    ← Volver al menú
-  </a>
+<!-- ════════════════════════════════════════════
+     FOOTER
+     ════════════════════════════════════════════ -->
+<footer class="footer">
+  <div>
+    <p class="footer__logo">Hernán <em>Masajista Funcional</em></p>
+    <p style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-muted);letter-spacing:0.08em;margin-top:0.3rem;opacity:0.5;">Santiago, Chile · @hernan.masajistafuncional</p>
+  </div>
+  <div class="footer__links">
+    <a href="https://wa.me/56923953959" target="_blank" class="footer__link">WhatsApp</a>
+    <a href="https://instagram.com/hernan.masajistafuncional" target="_blank" class="footer__link">Instagram</a>
+    <a href="https://share.google/WMo9tmKaBXn48WEws" target="_blank" class="footer__link">Google</a>
+  </div>
+  <p class="footer__copy">© 2025 · Todos los derechos reservados</p>
 </footer>
 
 </body>
